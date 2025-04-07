@@ -17,10 +17,11 @@ int main()
 //this function returns a^b
 int power(int a, int b)
 {
-  if (b != 0){
-    a = a*a;
-    power(int a, int b-1);
+  if (b == 1){
+    return a;
+}
 else{
-  return 0;
+      a = a*a;
+    power(a, b-1);
 }
 }
