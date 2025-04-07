@@ -17,8 +17,10 @@ int main()
 //this function returns a + (a+1) + ... + b
 int sum(int a, int b)
 {
-  
-  sum(a, b+1)
-  return 0;
-
+  if (a && b !<= 0){
+    sum(a, b+1)
+  }
+  else{
+    return 0;
+  }
 }
