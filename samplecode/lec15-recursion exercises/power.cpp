@@ -17,6 +17,10 @@ int main()
 //this function returns a^b
 int power(int a, int b)
 {
+  if (b != 0){
+    a = a*a;
+    power(int a, int b-1);
+else{
   return 0;
-
+}
 }
