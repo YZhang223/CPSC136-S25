@@ -18,7 +18,7 @@ int main()
 int sum(int a, int b)
 {
   if (a && b !<= 0){
-    sum(a, b+1)
+     a + sum(a + 1 , b+)
   }
   else{
     return 0;
