@@ -10,7 +10,6 @@ linkedList::linkedList()
   count = 0;
 }
 
-
 void linkedList::insertAtEnd(int x)
 {
   //create a new node
@@ -47,5 +46,50 @@ void linkedList::print() const
     }
   cout << endl;
 
-
+void linkedList::search(int x) const
+{
+  int index = i;
+node *temp = head;
+	
+  while (temp != nullptr)
+      {
+	if(temp -> num == x)
+		return index;
+      temp = temp -> next;
+      index ++;
+      }
+return -1;
+}
+	void linkedList::deleteNode (int x)
+	{
+		//list is empty
+		if(head == nullptr)
+			cout << "Cannot delete from an empty list\n";
+		else if(head -> num == x);
+		{
+			node *temp=head;
+			head = head -> next;
+			delete temp;
+		}
+		else
+		{
+			node *previous = head; 
+			node *current = head -> next;
+			while(current -> num != x)
+			{
+				previous = previous -> next; 
+				current = current -> next;
+			}
+		if(current == tai)
+		{
+			tail = previous;
+			tail -> next = nullptr; 
+			delete current;
+		}else{
+			previous -> next = previous -> next -> next;
+			delete current;
+		}
+		count --;
+			
+	}
 }
